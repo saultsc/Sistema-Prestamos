@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
-            userControl = new TabControl();
-            userPage1 = new TabPage();
-            dataGridViewUsuarios = new DataGridView();
+            clienteControl = new TabControl();
+            clientePage1 = new TabPage();
+            dataGridViewCliente = new DataGridView();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -42,86 +42,89 @@
             btnEditar = new Button();
             userPage2 = new TabPage();
             pInputs = new Panel();
-            textBox3 = new TextBox();
-            textBox5 = new TextBox();
-            comboBox3 = new ComboBox();
+            label15 = new Label();
+            txtBalance = new TextBox();
+            txtTrabajo = new TextBox();
+            label16 = new Label();
+            cbCobrador = new ComboBox();
             label11 = new Label();
-            comboBox2 = new ComboBox();
+            cbDireccion = new ComboBox();
             label10 = new Label();
-            comboBox1 = new ComboBox();
+            cbAgente = new ComboBox();
             label14 = new Label();
             label13 = new Label();
-            textBox4 = new TextBox();
+            txtLocalidad = new TextBox();
             label12 = new Label();
-            textBox1 = new TextBox();
-            cbAcces = new ComboBox();
-            textBox2 = new TextBox();
+            textRepresentante = new TextBox();
+            cbZona = new ComboBox();
+            txtProvincia = new TextBox();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
-            txtPassword = new TextBox();
-            txtCorreo = new TextBox();
+            txtCedula = new TextBox();
+            txtTelefono = new TextBox();
             txtNombre = new TextBox();
             lbAccion = new Label();
             btnCancel = new Button();
             btnSave = new Button();
-            label16 = new Label();
-            label15 = new Label();
-            userControl.SuspendLayout();
-            userPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).BeginInit();
+            Id = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
+            Cedula = new DataGridViewTextBoxColumn();
+            clienteControl.SuspendLayout();
+            clientePage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCliente).BeginInit();
             userPage2.SuspendLayout();
             pInputs.SuspendLayout();
             SuspendLayout();
             // 
-            // userControl
+            // clienteControl
             // 
-            userControl.Controls.Add(userPage1);
-            userControl.Controls.Add(userPage2);
-            userControl.Location = new Point(0, 0);
-            userControl.Name = "userControl";
-            userControl.SelectedIndex = 0;
-            userControl.Size = new Size(1061, 570);
-            userControl.TabIndex = 9;
-            userControl.TabStop = false;
+            clienteControl.Controls.Add(clientePage1);
+            clienteControl.Controls.Add(userPage2);
+            clienteControl.Location = new Point(0, 0);
+            clienteControl.Name = "clienteControl";
+            clienteControl.SelectedIndex = 0;
+            clienteControl.Size = new Size(1061, 570);
+            clienteControl.TabIndex = 9;
+            clienteControl.TabStop = false;
             // 
-            // userPage1
+            // clientePage1
             // 
-            userPage1.Controls.Add(dataGridViewUsuarios);
-            userPage1.Controls.Add(label1);
-            userPage1.Controls.Add(label2);
-            userPage1.Controls.Add(label3);
-            userPage1.Controls.Add(label4);
-            userPage1.Controls.Add(btnAgregar);
-            userPage1.Controls.Add(txtBuscar);
-            userPage1.Controls.Add(btnEliminar);
-            userPage1.Controls.Add(btnEditar);
-            userPage1.Location = new Point(4, 24);
-            userPage1.Name = "userPage1";
-            userPage1.Padding = new Padding(3);
-            userPage1.Size = new Size(1053, 542);
-            userPage1.TabIndex = 0;
-            userPage1.Text = " ";
-            userPage1.UseVisualStyleBackColor = true;
+            clientePage1.Controls.Add(dataGridViewCliente);
+            clientePage1.Controls.Add(label1);
+            clientePage1.Controls.Add(label2);
+            clientePage1.Controls.Add(label3);
+            clientePage1.Controls.Add(label4);
+            clientePage1.Controls.Add(btnAgregar);
+            clientePage1.Controls.Add(txtBuscar);
+            clientePage1.Controls.Add(btnEliminar);
+            clientePage1.Controls.Add(btnEditar);
+            clientePage1.Location = new Point(4, 24);
+            clientePage1.Name = "clientePage1";
+            clientePage1.Padding = new Padding(3);
+            clientePage1.Size = new Size(1053, 542);
+            clientePage1.TabIndex = 0;
+            clientePage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewUsuarios
+            // dataGridViewCliente
             // 
-            dataGridViewUsuarios.AllowUserToAddRows = false;
-            dataGridViewUsuarios.AllowUserToDeleteRows = false;
-            dataGridViewUsuarios.AllowUserToResizeColumns = false;
-            dataGridViewUsuarios.AllowUserToResizeRows = false;
-            dataGridViewUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewUsuarios.BorderStyle = BorderStyle.None;
-            dataGridViewUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewUsuarios.Location = new Point(20, 240);
-            dataGridViewUsuarios.MultiSelect = false;
-            dataGridViewUsuarios.Name = "dataGridViewUsuarios";
-            dataGridViewUsuarios.ReadOnly = true;
-            dataGridViewUsuarios.Size = new Size(881, 278);
-            dataGridViewUsuarios.TabIndex = 8;
-            dataGridViewUsuarios.TabStop = false;
+            dataGridViewCliente.AllowUserToAddRows = false;
+            dataGridViewCliente.AllowUserToDeleteRows = false;
+            dataGridViewCliente.AllowUserToResizeColumns = false;
+            dataGridViewCliente.AllowUserToResizeRows = false;
+            dataGridViewCliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCliente.BorderStyle = BorderStyle.None;
+            dataGridViewCliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCliente.Columns.AddRange(new DataGridViewColumn[] { Id, Nombre, Cedula });
+            dataGridViewCliente.Location = new Point(6, 240);
+            dataGridViewCliente.MultiSelect = false;
+            dataGridViewCliente.Name = "dataGridViewCliente";
+            dataGridViewCliente.ReadOnly = true;
+            dataGridViewCliente.Size = new Size(881, 278);
+            dataGridViewCliente.TabIndex = 8;
+            dataGridViewCliente.TabStop = false;
             // 
             // label1
             // 
@@ -171,6 +174,7 @@
             btnAgregar.Size = new Size(107, 67);
             btnAgregar.TabIndex = 0;
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // txtBuscar
             // 
@@ -178,6 +182,7 @@
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(290, 23);
             txtBuscar.TabIndex = 1;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // btnEliminar
             // 
@@ -187,6 +192,7 @@
             btnEliminar.Size = new Size(108, 39);
             btnEliminar.TabIndex = 3;
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnEditar
             // 
@@ -196,6 +202,7 @@
             btnEditar.Size = new Size(111, 37);
             btnEditar.TabIndex = 2;
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // userPage2
             // 
@@ -213,56 +220,74 @@
             // pInputs
             // 
             pInputs.Controls.Add(label15);
-            pInputs.Controls.Add(textBox3);
-            pInputs.Controls.Add(textBox5);
+            pInputs.Controls.Add(txtBalance);
+            pInputs.Controls.Add(txtTrabajo);
             pInputs.Controls.Add(label16);
-            pInputs.Controls.Add(comboBox3);
+            pInputs.Controls.Add(cbCobrador);
             pInputs.Controls.Add(label11);
-            pInputs.Controls.Add(comboBox2);
+            pInputs.Controls.Add(cbDireccion);
             pInputs.Controls.Add(label10);
-            pInputs.Controls.Add(comboBox1);
+            pInputs.Controls.Add(cbAgente);
             pInputs.Controls.Add(label14);
             pInputs.Controls.Add(label13);
-            pInputs.Controls.Add(textBox4);
+            pInputs.Controls.Add(txtLocalidad);
             pInputs.Controls.Add(label12);
-            pInputs.Controls.Add(textBox1);
-            pInputs.Controls.Add(cbAcces);
-            pInputs.Controls.Add(textBox2);
+            pInputs.Controls.Add(textRepresentante);
+            pInputs.Controls.Add(cbZona);
+            pInputs.Controls.Add(txtProvincia);
             pInputs.Controls.Add(label9);
             pInputs.Controls.Add(label8);
             pInputs.Controls.Add(label7);
             pInputs.Controls.Add(label6);
             pInputs.Controls.Add(label5);
-            pInputs.Controls.Add(txtPassword);
-            pInputs.Controls.Add(txtCorreo);
+            pInputs.Controls.Add(txtCedula);
+            pInputs.Controls.Add(txtTelefono);
             pInputs.Controls.Add(txtNombre);
             pInputs.Location = new Point(74, 40);
             pInputs.Name = "pInputs";
             pInputs.Size = new Size(891, 352);
             pInputs.TabIndex = 15;
             // 
-            // textBox3
+            // label15
             // 
-            textBox3.Enabled = false;
-            textBox3.Location = new Point(720, 314);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(139, 23);
-            textBox3.TabIndex = 36;
+            label15.AutoSize = true;
+            label15.Location = new Point(607, 322);
+            label15.Name = "label15";
+            label15.Size = new Size(107, 15);
+            label15.TabIndex = 35;
+            label15.Text = "Balance Pendiente:";
             // 
-            // textBox5
+            // txtBalance
             // 
-            textBox5.Location = new Point(21, 253);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(270, 23);
-            textBox5.TabIndex = 34;
+            txtBalance.Enabled = false;
+            txtBalance.Location = new Point(720, 314);
+            txtBalance.Name = "txtBalance";
+            txtBalance.Size = new Size(139, 23);
+            txtBalance.TabIndex = 36;
             // 
-            // comboBox3
+            // txtTrabajo
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(602, 139);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(270, 23);
-            comboBox3.TabIndex = 32;
+            txtTrabajo.Location = new Point(21, 253);
+            txtTrabajo.Name = "txtTrabajo";
+            txtTrabajo.Size = new Size(270, 23);
+            txtTrabajo.TabIndex = 34;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(21, 235);
+            label16.Name = "label16";
+            label16.Size = new Size(45, 15);
+            label16.TabIndex = 33;
+            label16.Text = "Trabajo";
+            // 
+            // cbCobrador
+            // 
+            cbCobrador.FormattingEnabled = true;
+            cbCobrador.Location = new Point(602, 139);
+            cbCobrador.Name = "cbCobrador";
+            cbCobrador.Size = new Size(270, 23);
+            cbCobrador.TabIndex = 32;
             // 
             // label11
             // 
@@ -274,13 +299,13 @@
             label11.TabIndex = 31;
             label11.Text = "Cobador";
             // 
-            // comboBox2
+            // cbDireccion
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(602, 198);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(270, 23);
-            comboBox2.TabIndex = 30;
+            cbDireccion.FormattingEnabled = true;
+            cbDireccion.Location = new Point(602, 198);
+            cbDireccion.Name = "cbDireccion";
+            cbDireccion.Size = new Size(270, 23);
+            cbDireccion.TabIndex = 30;
             // 
             // label10
             // 
@@ -288,17 +313,17 @@
             label10.FlatStyle = FlatStyle.Popup;
             label10.Location = new Point(602, 180);
             label10.Name = "label10";
-            label10.Size = new Size(64, 15);
+            label10.Size = new Size(55, 15);
             label10.TabIndex = 29;
-            label10.Text = "Dirrecion 1";
+            label10.Text = "Dirrecion";
             // 
-            // comboBox1
+            // cbAgente
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(310, 139);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(270, 23);
-            comboBox1.TabIndex = 27;
+            cbAgente.FormattingEnabled = true;
+            cbAgente.Location = new Point(310, 139);
+            cbAgente.Name = "cbAgente";
+            cbAgente.Size = new Size(270, 23);
+            cbAgente.TabIndex = 27;
             // 
             // label14
             // 
@@ -319,12 +344,12 @@
             label13.TabIndex = 23;
             label13.Text = "Localidad";
             // 
-            // textBox4
+            // txtLocalidad
             // 
-            textBox4.Location = new Point(310, 198);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(270, 23);
-            textBox4.TabIndex = 28;
+            txtLocalidad.Location = new Point(310, 198);
+            txtLocalidad.Name = "txtLocalidad";
+            txtLocalidad.Size = new Size(270, 23);
+            txtLocalidad.TabIndex = 28;
             // 
             // label12
             // 
@@ -335,27 +360,27 @@
             label12.TabIndex = 21;
             label12.Text = "Representante";
             // 
-            // textBox1
+            // textRepresentante
             // 
-            textBox1.Location = new Point(21, 85);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(270, 23);
-            textBox1.TabIndex = 20;
+            textRepresentante.Location = new Point(21, 85);
+            textRepresentante.Name = "textRepresentante";
+            textRepresentante.Size = new Size(270, 23);
+            textRepresentante.TabIndex = 20;
             // 
-            // cbAcces
+            // cbZona
             // 
-            cbAcces.FormattingEnabled = true;
-            cbAcces.Location = new Point(21, 139);
-            cbAcces.Name = "cbAcces";
-            cbAcces.Size = new Size(270, 23);
-            cbAcces.TabIndex = 19;
+            cbZona.FormattingEnabled = true;
+            cbZona.Location = new Point(21, 139);
+            cbZona.Name = "cbZona";
+            cbZona.Size = new Size(270, 23);
+            cbZona.TabIndex = 19;
             // 
-            // textBox2
+            // txtProvincia
             // 
-            textBox2.Location = new Point(21, 198);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(270, 23);
-            textBox2.TabIndex = 16;
+            txtProvincia.Location = new Point(21, 198);
+            txtProvincia.Name = "txtProvincia";
+            txtProvincia.Size = new Size(270, 23);
+            txtProvincia.TabIndex = 16;
             // 
             // label9
             // 
@@ -403,19 +428,19 @@
             label5.TabIndex = 10;
             label5.Text = "Nombre";
             // 
-            // txtPassword
+            // txtCedula
             // 
-            txtPassword.Location = new Point(602, 32);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(270, 23);
-            txtPassword.TabIndex = 6;
+            txtCedula.Location = new Point(602, 32);
+            txtCedula.Name = "txtCedula";
+            txtCedula.Size = new Size(270, 23);
+            txtCedula.TabIndex = 6;
             // 
-            // txtCorreo
+            // txtTelefono
             // 
-            txtCorreo.Location = new Point(310, 32);
-            txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(270, 23);
-            txtCorreo.TabIndex = 4;
+            txtTelefono.Location = new Point(310, 32);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(270, 23);
+            txtTelefono.TabIndex = 4;
             // 
             // txtNombre
             // 
@@ -441,6 +466,7 @@
             btnCancel.TabIndex = 8;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSave
             // 
@@ -450,37 +476,41 @@
             btnSave.TabIndex = 7;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
-            // label16
+            // Id
             // 
-            label16.AutoSize = true;
-            label16.Location = new Point(21, 235);
-            label16.Name = "label16";
-            label16.Size = new Size(45, 15);
-            label16.TabIndex = 33;
-            label16.Text = "Trabajo";
+            Id.DataPropertyName = "Id";
+            Id.HeaderText = "Codigo";
+            Id.Name = "Id";
+            Id.ReadOnly = true;
             // 
-            // label15
+            // Nombre
             // 
-            label15.AutoSize = true;
-            label15.Location = new Point(607, 322);
-            label15.Name = "label15";
-            label15.Size = new Size(107, 15);
-            label15.TabIndex = 35;
-            label15.Text = "Balance Pendiente:";
+            Nombre.DataPropertyName = "Nombre";
+            Nombre.HeaderText = "Nombre";
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            // 
+            // Cedula
+            // 
+            Cedula.DataPropertyName = "Cedula";
+            Cedula.HeaderText = "Cedula";
+            Cedula.Name = "Cedula";
+            Cedula.ReadOnly = true;
             // 
             // Clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1062, 570);
-            Controls.Add(userControl);
+            Controls.Add(clienteControl);
             Name = "Clientes";
             Text = "Clientes";
-            userControl.ResumeLayout(false);
-            userPage1.ResumeLayout(false);
-            userPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).EndInit();
+            clienteControl.ResumeLayout(false);
+            clientePage1.ResumeLayout(false);
+            clientePage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCliente).EndInit();
             userPage2.ResumeLayout(false);
             userPage2.PerformLayout();
             pInputs.ResumeLayout(false);
@@ -490,9 +520,9 @@
 
         #endregion
 
-        private TabControl userControl;
-        private TabPage userPage1;
-        private DataGridView dataGridViewUsuarios;
+        private TabControl clienteControl;
+        private TabPage clientePage1;
+        private DataGridView dataGridViewCliente;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -503,32 +533,35 @@
         private Button btnEditar;
         private TabPage userPage2;
         private Panel pInputs;
-        private TextBox textBox2;
+        private TextBox txtProvincia;
         private Label label9;
         private Label label7;
         private Label label6;
         private Label label5;
-        private TextBox txtPassword;
-        private TextBox txtCorreo;
+        private TextBox txtCedula;
+        private TextBox txtTelefono;
         private TextBox txtNombre;
         private Label lbAccion;
         private Button btnCancel;
         private Button btnSave;
         private Label label13;
-        private TextBox textBox4;
+        private TextBox txtLocalidad;
         private Label label12;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
+        private TextBox textRepresentante;
+        private ComboBox cbAgente;
         private Label label14;
-        private ComboBox cbAcces;
+        private ComboBox cbZona;
         private Label label8;
-        private ComboBox comboBox2;
+        private ComboBox cbDireccion;
         private Label label10;
-        private TextBox textBox3;
-        private TextBox textBox5;
-        private ComboBox comboBox3;
+        private TextBox txtBalance;
+        private TextBox txtTrabajo;
+        private ComboBox cbCobrador;
         private Label label11;
         private Label label15;
         private Label label16;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Cedula;
     }
 }

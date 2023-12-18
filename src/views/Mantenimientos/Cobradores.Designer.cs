@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cobradores));
-            userControl = new TabControl();
-            userPage1 = new TabPage();
-            dataGridViewUsuarios = new DataGridView();
+            cobradorControl = new TabControl();
+            cobradorPage1 = new TabPage();
+            dataGridViewCobrador = new DataGridView();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -40,78 +40,78 @@
             txtBuscar = new TextBox();
             btnEliminar = new Button();
             btnEditar = new Button();
-            userPage2 = new TabPage();
+            cobradorPage2 = new TabPage();
             pInputs = new Panel();
-            label11 = new Label();
-            textBox3 = new TextBox();
+            cbDireccion = new ComboBox();
             label10 = new Label();
-            textBox1 = new TextBox();
-            cbAcces = new ComboBox();
-            textBox2 = new TextBox();
+            label11 = new Label();
+            textLocalidad = new TextBox();
+            cbZona = new ComboBox();
+            textProvincia = new TextBox();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
-            txtPassword = new TextBox();
-            txtCorreo = new TextBox();
+            txtCedula = new TextBox();
+            txtTelefono = new TextBox();
             txtNombre = new TextBox();
             lbAccion = new Label();
             btnCancel = new Button();
             btnSave = new Button();
-            userControl.SuspendLayout();
-            userPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).BeginInit();
-            userPage2.SuspendLayout();
+            cobradorControl.SuspendLayout();
+            cobradorPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCobrador).BeginInit();
+            cobradorPage2.SuspendLayout();
             pInputs.SuspendLayout();
             SuspendLayout();
             // 
-            // userControl
+            // cobradorControl
             // 
-            userControl.Controls.Add(userPage1);
-            userControl.Controls.Add(userPage2);
-            userControl.Location = new Point(0, 0);
-            userControl.Name = "userControl";
-            userControl.SelectedIndex = 0;
-            userControl.Size = new Size(1061, 570);
-            userControl.TabIndex = 9;
-            userControl.TabStop = false;
+            cobradorControl.Controls.Add(cobradorPage1);
+            cobradorControl.Controls.Add(cobradorPage2);
+            cobradorControl.Location = new Point(0, 0);
+            cobradorControl.Name = "cobradorControl";
+            cobradorControl.SelectedIndex = 0;
+            cobradorControl.Size = new Size(1061, 570);
+            cobradorControl.TabIndex = 9;
+            cobradorControl.TabStop = false;
             // 
-            // userPage1
+            // cobradorPage1
             // 
-            userPage1.Controls.Add(dataGridViewUsuarios);
-            userPage1.Controls.Add(label1);
-            userPage1.Controls.Add(label2);
-            userPage1.Controls.Add(label3);
-            userPage1.Controls.Add(label4);
-            userPage1.Controls.Add(btnAgregar);
-            userPage1.Controls.Add(txtBuscar);
-            userPage1.Controls.Add(btnEliminar);
-            userPage1.Controls.Add(btnEditar);
-            userPage1.Location = new Point(4, 24);
-            userPage1.Name = "userPage1";
-            userPage1.Padding = new Padding(3);
-            userPage1.Size = new Size(1053, 542);
-            userPage1.TabIndex = 0;
-            userPage1.Text = " ";
-            userPage1.UseVisualStyleBackColor = true;
+            cobradorPage1.Controls.Add(dataGridViewCobrador);
+            cobradorPage1.Controls.Add(label1);
+            cobradorPage1.Controls.Add(label2);
+            cobradorPage1.Controls.Add(label3);
+            cobradorPage1.Controls.Add(label4);
+            cobradorPage1.Controls.Add(btnAgregar);
+            cobradorPage1.Controls.Add(txtBuscar);
+            cobradorPage1.Controls.Add(btnEliminar);
+            cobradorPage1.Controls.Add(btnEditar);
+            cobradorPage1.Location = new Point(4, 24);
+            cobradorPage1.Name = "cobradorPage1";
+            cobradorPage1.Padding = new Padding(3);
+            cobradorPage1.Size = new Size(1053, 542);
+            cobradorPage1.TabIndex = 0;
+            cobradorPage1.Text = " ";
+            cobradorPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewUsuarios
+            // dataGridViewCobrador
             // 
-            dataGridViewUsuarios.AllowUserToAddRows = false;
-            dataGridViewUsuarios.AllowUserToDeleteRows = false;
-            dataGridViewUsuarios.AllowUserToResizeColumns = false;
-            dataGridViewUsuarios.AllowUserToResizeRows = false;
-            dataGridViewUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewUsuarios.BorderStyle = BorderStyle.None;
-            dataGridViewUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewUsuarios.Location = new Point(20, 240);
-            dataGridViewUsuarios.MultiSelect = false;
-            dataGridViewUsuarios.Name = "dataGridViewUsuarios";
-            dataGridViewUsuarios.ReadOnly = true;
-            dataGridViewUsuarios.Size = new Size(881, 278);
-            dataGridViewUsuarios.TabIndex = 8;
-            dataGridViewUsuarios.TabStop = false;
+            dataGridViewCobrador.AllowUserToAddRows = false;
+            dataGridViewCobrador.AllowUserToDeleteRows = false;
+            dataGridViewCobrador.AllowUserToResizeColumns = false;
+            dataGridViewCobrador.AllowUserToResizeRows = false;
+            dataGridViewCobrador.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCobrador.BorderStyle = BorderStyle.None;
+            dataGridViewCobrador.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCobrador.Location = new Point(20, 240);
+            dataGridViewCobrador.MultiSelect = false;
+            dataGridViewCobrador.Name = "dataGridViewCobrador";
+            dataGridViewCobrador.ReadOnly = true;
+            dataGridViewCobrador.Size = new Size(881, 278);
+            dataGridViewCobrador.TabIndex = 8;
+            dataGridViewCobrador.TabStop = false;
             // 
             // label1
             // 
@@ -161,6 +161,7 @@
             btnAgregar.Size = new Size(107, 67);
             btnAgregar.TabIndex = 0;
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // txtBuscar
             // 
@@ -168,6 +169,7 @@
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(290, 23);
             txtBuscar.TabIndex = 1;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // btnEliminar
             // 
@@ -177,6 +179,7 @@
             btnEliminar.Size = new Size(108, 39);
             btnEliminar.TabIndex = 3;
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnEditar
             // 
@@ -186,40 +189,59 @@
             btnEditar.Size = new Size(111, 37);
             btnEditar.TabIndex = 2;
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
-            // userPage2
+            // cobradorPage2
             // 
-            userPage2.Controls.Add(pInputs);
-            userPage2.Controls.Add(lbAccion);
-            userPage2.Controls.Add(btnCancel);
-            userPage2.Controls.Add(btnSave);
-            userPage2.Location = new Point(4, 24);
-            userPage2.Name = "userPage2";
-            userPage2.Padding = new Padding(3);
-            userPage2.Size = new Size(1053, 542);
-            userPage2.TabIndex = 1;
-            userPage2.UseVisualStyleBackColor = true;
+            cobradorPage2.Controls.Add(pInputs);
+            cobradorPage2.Controls.Add(lbAccion);
+            cobradorPage2.Controls.Add(btnCancel);
+            cobradorPage2.Controls.Add(btnSave);
+            cobradorPage2.Location = new Point(4, 24);
+            cobradorPage2.Name = "cobradorPage2";
+            cobradorPage2.Padding = new Padding(3);
+            cobradorPage2.Size = new Size(1053, 542);
+            cobradorPage2.TabIndex = 1;
+            cobradorPage2.UseVisualStyleBackColor = true;
             // 
             // pInputs
             // 
-            pInputs.Controls.Add(label11);
-            pInputs.Controls.Add(textBox3);
+            pInputs.Controls.Add(cbDireccion);
             pInputs.Controls.Add(label10);
-            pInputs.Controls.Add(textBox1);
-            pInputs.Controls.Add(cbAcces);
-            pInputs.Controls.Add(textBox2);
+            pInputs.Controls.Add(label11);
+            pInputs.Controls.Add(textLocalidad);
+            pInputs.Controls.Add(cbZona);
+            pInputs.Controls.Add(textProvincia);
             pInputs.Controls.Add(label9);
             pInputs.Controls.Add(label8);
             pInputs.Controls.Add(label7);
             pInputs.Controls.Add(label6);
             pInputs.Controls.Add(label5);
-            pInputs.Controls.Add(txtPassword);
-            pInputs.Controls.Add(txtCorreo);
+            pInputs.Controls.Add(txtCedula);
+            pInputs.Controls.Add(txtTelefono);
             pInputs.Controls.Add(txtNombre);
             pInputs.Location = new Point(235, 68);
             pInputs.Name = "pInputs";
             pInputs.Size = new Size(612, 312);
             pInputs.TabIndex = 15;
+            // 
+            // cbDireccion
+            // 
+            cbDireccion.FormattingEnabled = true;
+            cbDireccion.Location = new Point(319, 169);
+            cbDireccion.Name = "cbDireccion";
+            cbDireccion.Size = new Size(270, 23);
+            cbDireccion.TabIndex = 25;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.FlatStyle = FlatStyle.Popup;
+            label10.Location = new Point(319, 151);
+            label10.Name = "label10";
+            label10.Size = new Size(57, 15);
+            label10.TabIndex = 24;
+            label10.Text = "Direccion";
             // 
             // label11
             // 
@@ -230,43 +252,27 @@
             label11.TabIndex = 23;
             label11.Text = "Localidad";
             // 
-            // textBox3
+            // textLocalidad
             // 
-            textBox3.Location = new Point(21, 221);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(270, 23);
-            textBox3.TabIndex = 22;
+            textLocalidad.Location = new Point(21, 221);
+            textLocalidad.Name = "textLocalidad";
+            textLocalidad.Size = new Size(270, 23);
+            textLocalidad.TabIndex = 22;
             // 
-            // label10
+            // cbZona
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(319, 151);
-            label10.Name = "label10";
-            label10.Size = new Size(57, 15);
-            label10.TabIndex = 21;
-            label10.Text = "Direccion";
+            cbZona.FormattingEnabled = true;
+            cbZona.Location = new Point(21, 169);
+            cbZona.Name = "cbZona";
+            cbZona.Size = new Size(270, 23);
+            cbZona.TabIndex = 19;
             // 
-            // textBox1
+            // textProvincia
             // 
-            textBox1.Location = new Point(319, 169);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(270, 23);
-            textBox1.TabIndex = 20;
-            // 
-            // cbAcces
-            // 
-            cbAcces.FormattingEnabled = true;
-            cbAcces.Location = new Point(21, 169);
-            cbAcces.Name = "cbAcces";
-            cbAcces.Size = new Size(270, 23);
-            cbAcces.TabIndex = 19;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(319, 221);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(270, 23);
-            textBox2.TabIndex = 16;
+            textProvincia.Location = new Point(319, 221);
+            textProvincia.Name = "textProvincia";
+            textProvincia.Size = new Size(270, 23);
+            textProvincia.TabIndex = 16;
             // 
             // label9
             // 
@@ -314,19 +320,19 @@
             label5.TabIndex = 10;
             label5.Text = "Nombre";
             // 
-            // txtPassword
+            // txtCedula
             // 
-            txtPassword.Location = new Point(21, 82);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(270, 23);
-            txtPassword.TabIndex = 6;
+            txtCedula.Location = new Point(21, 82);
+            txtCedula.Name = "txtCedula";
+            txtCedula.Size = new Size(270, 23);
+            txtCedula.TabIndex = 6;
             // 
-            // txtCorreo
+            // txtTelefono
             // 
-            txtCorreo.Location = new Point(319, 32);
-            txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(270, 23);
-            txtCorreo.TabIndex = 4;
+            txtTelefono.Location = new Point(319, 32);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(270, 23);
+            txtTelefono.TabIndex = 4;
             // 
             // txtNombre
             // 
@@ -352,6 +358,7 @@
             btnCancel.TabIndex = 8;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSave
             // 
@@ -361,21 +368,22 @@
             btnSave.TabIndex = 7;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // Cobradores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1058, 568);
-            Controls.Add(userControl);
+            Controls.Add(cobradorControl);
             Name = "Cobradores";
             Text = "Cobradores";
-            userControl.ResumeLayout(false);
-            userPage1.ResumeLayout(false);
-            userPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).EndInit();
-            userPage2.ResumeLayout(false);
-            userPage2.PerformLayout();
+            cobradorControl.ResumeLayout(false);
+            cobradorPage1.ResumeLayout(false);
+            cobradorPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCobrador).EndInit();
+            cobradorPage2.ResumeLayout(false);
+            cobradorPage2.PerformLayout();
             pInputs.ResumeLayout(false);
             pInputs.PerformLayout();
             ResumeLayout(false);
@@ -383,9 +391,9 @@
 
         #endregion
 
-        private TabControl userControl;
-        private TabPage userPage1;
-        private DataGridView dataGridViewUsuarios;
+        private TabControl cobradorControl;
+        private TabPage cobradorPage1;
+        private DataGridView dataGridViewCobrador;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -394,24 +402,24 @@
         private TextBox txtBuscar;
         private Button btnEliminar;
         private Button btnEditar;
-        private TabPage userPage2;
+        private TabPage cobradorPage2;
         private Panel pInputs;
-        private Label label10;
-        private TextBox textBox1;
-        private ComboBox cbAcces;
-        private TextBox textBox2;
+        private ComboBox cbZona;
+        private TextBox textProvincia;
         private Label label9;
         private Label label8;
         private Label label7;
         private Label label6;
         private Label label5;
-        private TextBox txtPassword;
-        private TextBox txtCorreo;
+        private TextBox txtCedula;
+        private TextBox txtTelefono;
         private TextBox txtNombre;
         private Label lbAccion;
         private Button btnCancel;
         private Button btnSave;
         private Label label11;
-        private TextBox textBox3;
+        private TextBox textLocalidad;
+        private ComboBox cbDireccion;
+        private Label label10;
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agentes));
-            userControl = new TabControl();
-            userPage1 = new TabPage();
-            dataGridViewUsuarios = new DataGridView();
+            agenteControl = new TabControl();
+            agentePage1 = new TabPage();
+            dataGridViewAgente = new DataGridView();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -40,74 +40,74 @@
             txtBuscar = new TextBox();
             btnEliminar = new Button();
             btnEditar = new Button();
-            userPage2 = new TabPage();
+            agentePage2 = new TabPage();
             pInputs = new Panel();
-            cbAcces = new ComboBox();
-            textBox2 = new TextBox();
+            cbZona = new ComboBox();
+            textProvicia = new TextBox();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
-            txtPassword = new TextBox();
-            txtCorreo = new TextBox();
+            txtCedula = new TextBox();
+            txttelefono = new TextBox();
             txtNombre = new TextBox();
             lbAccion = new Label();
             btnCancel = new Button();
             btnSave = new Button();
-            userControl.SuspendLayout();
-            userPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).BeginInit();
-            userPage2.SuspendLayout();
+            agenteControl.SuspendLayout();
+            agentePage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAgente).BeginInit();
+            agentePage2.SuspendLayout();
             pInputs.SuspendLayout();
             SuspendLayout();
             // 
-            // userControl
+            // agenteControl
             // 
-            userControl.Controls.Add(userPage1);
-            userControl.Controls.Add(userPage2);
-            userControl.Location = new Point(2, 2);
-            userControl.Name = "userControl";
-            userControl.SelectedIndex = 0;
-            userControl.Size = new Size(1061, 570);
-            userControl.TabIndex = 8;
-            userControl.TabStop = false;
+            agenteControl.Controls.Add(agentePage1);
+            agenteControl.Controls.Add(agentePage2);
+            agenteControl.Location = new Point(2, 2);
+            agenteControl.Name = "agenteControl";
+            agenteControl.SelectedIndex = 0;
+            agenteControl.Size = new Size(1061, 570);
+            agenteControl.TabIndex = 8;
+            agenteControl.TabStop = false;
             // 
-            // userPage1
+            // agentePage1
             // 
-            userPage1.Controls.Add(dataGridViewUsuarios);
-            userPage1.Controls.Add(label1);
-            userPage1.Controls.Add(label2);
-            userPage1.Controls.Add(label3);
-            userPage1.Controls.Add(label4);
-            userPage1.Controls.Add(btnAgregar);
-            userPage1.Controls.Add(txtBuscar);
-            userPage1.Controls.Add(btnEliminar);
-            userPage1.Controls.Add(btnEditar);
-            userPage1.Location = new Point(4, 24);
-            userPage1.Name = "userPage1";
-            userPage1.Padding = new Padding(3);
-            userPage1.Size = new Size(1053, 542);
-            userPage1.TabIndex = 0;
-            userPage1.Text = " ";
-            userPage1.UseVisualStyleBackColor = true;
+            agentePage1.Controls.Add(dataGridViewAgente);
+            agentePage1.Controls.Add(label1);
+            agentePage1.Controls.Add(label2);
+            agentePage1.Controls.Add(label3);
+            agentePage1.Controls.Add(label4);
+            agentePage1.Controls.Add(btnAgregar);
+            agentePage1.Controls.Add(txtBuscar);
+            agentePage1.Controls.Add(btnEliminar);
+            agentePage1.Controls.Add(btnEditar);
+            agentePage1.Location = new Point(4, 24);
+            agentePage1.Name = "agentePage1";
+            agentePage1.Padding = new Padding(3);
+            agentePage1.Size = new Size(1053, 542);
+            agentePage1.TabIndex = 0;
+            agentePage1.Text = " ";
+            agentePage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewUsuarios
+            // dataGridViewAgente
             // 
-            dataGridViewUsuarios.AllowUserToAddRows = false;
-            dataGridViewUsuarios.AllowUserToDeleteRows = false;
-            dataGridViewUsuarios.AllowUserToResizeColumns = false;
-            dataGridViewUsuarios.AllowUserToResizeRows = false;
-            dataGridViewUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewUsuarios.BorderStyle = BorderStyle.None;
-            dataGridViewUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewUsuarios.Location = new Point(20, 240);
-            dataGridViewUsuarios.MultiSelect = false;
-            dataGridViewUsuarios.Name = "dataGridViewUsuarios";
-            dataGridViewUsuarios.ReadOnly = true;
-            dataGridViewUsuarios.Size = new Size(881, 278);
-            dataGridViewUsuarios.TabIndex = 8;
-            dataGridViewUsuarios.TabStop = false;
+            dataGridViewAgente.AllowUserToAddRows = false;
+            dataGridViewAgente.AllowUserToDeleteRows = false;
+            dataGridViewAgente.AllowUserToResizeColumns = false;
+            dataGridViewAgente.AllowUserToResizeRows = false;
+            dataGridViewAgente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewAgente.BorderStyle = BorderStyle.None;
+            dataGridViewAgente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewAgente.Location = new Point(20, 240);
+            dataGridViewAgente.MultiSelect = false;
+            dataGridViewAgente.Name = "dataGridViewAgente";
+            dataGridViewAgente.ReadOnly = true;
+            dataGridViewAgente.Size = new Size(881, 278);
+            dataGridViewAgente.TabIndex = 8;
+            dataGridViewAgente.TabStop = false;
             // 
             // label1
             // 
@@ -157,6 +157,7 @@
             btnAgregar.Size = new Size(107, 67);
             btnAgregar.TabIndex = 0;
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // txtBuscar
             // 
@@ -173,6 +174,7 @@
             btnEliminar.Size = new Size(108, 39);
             btnEliminar.TabIndex = 3;
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnEditar
             // 
@@ -182,56 +184,57 @@
             btnEditar.Size = new Size(111, 37);
             btnEditar.TabIndex = 2;
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
-            // userPage2
+            // agentePage2
             // 
-            userPage2.Controls.Add(pInputs);
-            userPage2.Controls.Add(lbAccion);
-            userPage2.Controls.Add(btnCancel);
-            userPage2.Controls.Add(btnSave);
-            userPage2.Location = new Point(4, 24);
-            userPage2.Name = "userPage2";
-            userPage2.Padding = new Padding(3);
-            userPage2.Size = new Size(1053, 542);
-            userPage2.TabIndex = 1;
-            userPage2.UseVisualStyleBackColor = true;
+            agentePage2.Controls.Add(pInputs);
+            agentePage2.Controls.Add(lbAccion);
+            agentePage2.Controls.Add(btnCancel);
+            agentePage2.Controls.Add(btnSave);
+            agentePage2.Location = new Point(4, 24);
+            agentePage2.Name = "agentePage2";
+            agentePage2.Padding = new Padding(3);
+            agentePage2.Size = new Size(1053, 542);
+            agentePage2.TabIndex = 1;
+            agentePage2.UseVisualStyleBackColor = true;
             // 
             // pInputs
             // 
-            pInputs.Controls.Add(cbAcces);
-            pInputs.Controls.Add(textBox2);
+            pInputs.Controls.Add(cbZona);
+            pInputs.Controls.Add(textProvicia);
             pInputs.Controls.Add(label9);
             pInputs.Controls.Add(label8);
             pInputs.Controls.Add(label7);
             pInputs.Controls.Add(label6);
             pInputs.Controls.Add(label5);
-            pInputs.Controls.Add(txtPassword);
-            pInputs.Controls.Add(txtCorreo);
+            pInputs.Controls.Add(txtCedula);
+            pInputs.Controls.Add(txttelefono);
             pInputs.Controls.Add(txtNombre);
-            pInputs.Location = new Point(210, 68);
+            pInputs.Location = new Point(228, 123);
             pInputs.Name = "pInputs";
-            pInputs.Size = new Size(612, 314);
+            pInputs.Size = new Size(612, 211);
             pInputs.TabIndex = 15;
             // 
-            // cbAcces
+            // cbZona
             // 
-            cbAcces.FormattingEnabled = true;
-            cbAcces.Location = new Point(21, 218);
-            cbAcces.Name = "cbAcces";
-            cbAcces.Size = new Size(270, 23);
-            cbAcces.TabIndex = 19;
+            cbZona.FormattingEnabled = true;
+            cbZona.Location = new Point(21, 159);
+            cbZona.Name = "cbZona";
+            cbZona.Size = new Size(270, 23);
+            cbZona.TabIndex = 19;
             // 
-            // textBox2
+            // textProvicia
             // 
-            textBox2.Location = new Point(21, 276);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(270, 23);
-            textBox2.TabIndex = 16;
+            textProvicia.Location = new Point(319, 159);
+            textProvicia.Name = "textProvicia";
+            textProvicia.Size = new Size(270, 23);
+            textProvicia.TabIndex = 16;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(21, 258);
+            label9.Location = new Point(319, 141);
             label9.Name = "label9";
             label9.Size = new Size(56, 15);
             label9.TabIndex = 15;
@@ -241,16 +244,16 @@
             // 
             label8.AutoSize = true;
             label8.FlatStyle = FlatStyle.Popup;
-            label8.Location = new Point(21, 200);
+            label8.Location = new Point(21, 141);
             label8.Name = "label8";
-            label8.Size = new Size(84, 15);
+            label8.Size = new Size(34, 15);
             label8.TabIndex = 13;
-            label8.Text = "Codigo (Zona)";
+            label8.Text = "Zona";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(21, 138);
+            label7.Location = new Point(21, 77);
             label7.Name = "label7";
             label7.Size = new Size(44, 15);
             label7.TabIndex = 12;
@@ -259,7 +262,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(21, 78);
+            label6.Location = new Point(319, 14);
             label6.Name = "label6";
             label6.Size = new Size(52, 15);
             label6.TabIndex = 11;
@@ -274,19 +277,19 @@
             label5.TabIndex = 10;
             label5.Text = "Nombre";
             // 
-            // txtPassword
+            // txtCedula
             // 
-            txtPassword.Location = new Point(21, 156);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(270, 23);
-            txtPassword.TabIndex = 6;
+            txtCedula.Location = new Point(21, 95);
+            txtCedula.Name = "txtCedula";
+            txtCedula.Size = new Size(270, 23);
+            txtCedula.TabIndex = 6;
             // 
-            // txtCorreo
+            // txttelefono
             // 
-            txtCorreo.Location = new Point(21, 96);
-            txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(270, 23);
-            txtCorreo.TabIndex = 4;
+            txttelefono.Location = new Point(319, 32);
+            txttelefono.Name = "txttelefono";
+            txttelefono.Size = new Size(270, 23);
+            txttelefono.TabIndex = 4;
             // 
             // txtNombre
             // 
@@ -298,7 +301,7 @@
             // lbAccion
             // 
             lbAccion.AutoSize = true;
-            lbAccion.Location = new Point(445, 40);
+            lbAccion.Location = new Point(468, 39);
             lbAccion.Name = "lbAccion";
             lbAccion.Size = new Size(90, 15);
             lbAccion.TabIndex = 14;
@@ -312,6 +315,7 @@
             btnCancel.TabIndex = 8;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSave
             // 
@@ -321,21 +325,22 @@
             btnSave.TabIndex = 7;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // Agentes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1059, 568);
-            Controls.Add(userControl);
+            Controls.Add(agenteControl);
             Name = "Agentes";
             Text = "Agentes";
-            userControl.ResumeLayout(false);
-            userPage1.ResumeLayout(false);
-            userPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).EndInit();
-            userPage2.ResumeLayout(false);
-            userPage2.PerformLayout();
+            agenteControl.ResumeLayout(false);
+            agentePage1.ResumeLayout(false);
+            agentePage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAgente).EndInit();
+            agentePage2.ResumeLayout(false);
+            agentePage2.PerformLayout();
             pInputs.ResumeLayout(false);
             pInputs.PerformLayout();
             ResumeLayout(false);
@@ -343,9 +348,9 @@
 
         #endregion
 
-        private TabControl userControl;
-        private TabPage userPage1;
-        private DataGridView dataGridViewUsuarios;
+        private TabControl agenteControl;
+        private TabPage agentePage1;
+        private DataGridView dataGridViewAgente;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -354,20 +359,20 @@
         private TextBox txtBuscar;
         private Button btnEliminar;
         private Button btnEditar;
-        private TabPage userPage2;
+        private TabPage agentePage2;
         private Panel pInputs;
         private Label label8;
         private Label label7;
         private Label label6;
         private Label label5;
-        private TextBox txtPassword;
-        private TextBox txtCorreo;
+        private TextBox txtCedula;
+        private TextBox txttelefono;
         private TextBox txtNombre;
         private Label lbAccion;
         private Button btnCancel;
         private Button btnSave;
-        private TextBox textBox2;
+        private TextBox textProvicia;
         private Label label9;
-        private ComboBox cbAcces;
+        private ComboBox cbZona;
     }
 }

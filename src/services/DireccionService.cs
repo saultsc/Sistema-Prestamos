@@ -18,17 +18,11 @@ namespace Sistema_Prestamos.src.services
             _context = context;
         }
 
-        public List<object> GetAllDirecciones()
+        public List<Direccion> GetAllDirecciones()
         {
             var direcciones = _context.Direccion.ToList();
 
-            return direcciones.Select(direccion => new
-            {
-                direccion.Id,
-                direccion.Nombre,
-                direccion.CreatedAt,
-                direccion.UpdatedAt
-            }).Cast<object>().ToList();
+            return direcciones;
         }
 
         public Direccion GetDireccion(int id)

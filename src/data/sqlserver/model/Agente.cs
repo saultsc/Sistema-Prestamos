@@ -17,6 +17,7 @@ namespace Sistema_Prestamos.src.data.sqlserver.model
         public required string Nombre { get; set; }
         public string Telefono { get; set; } = string.Empty;
         public required string Cedula { get; set; }
+        public required string Zona { get; set; }
         public string Provincia { get; set; } = string.Empty;
 
         public DateTime? CreatedAt { get; set; }

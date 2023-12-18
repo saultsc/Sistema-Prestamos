@@ -19,17 +19,10 @@ namespace Sistema_Prestamos.src.services
             _context = context;
         }
 
-        public List<object> GetAllZonas()
+        public List<Zona> GetAllZonas()
         {
             var zonas = _context.Zona.ToList();
-
-            return zonas.Select(zona => new
-            {
-                zona.Id,
-                zona.Nombre,
-                zona.CreatedAt,
-                zona.UpdatedAt
-            }).Cast<object>().ToList();
+            return zonas;
         }
 
         public Zona GetZona(int id)
