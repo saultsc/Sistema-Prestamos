@@ -113,7 +113,16 @@ namespace Sistema_Prestamos.src.views.Mantenimientos
         {
             if (!IsInputValid()) return;
 
-            userService.UpdateUser(idSeleccionado, txtNombre.Text, txtCorreo.Text, txtPassword.Text, cbAcces.Text);
+            string nuevoCorreo = txtCorreo.Text.Trim();
+
+            // Validar si el nuevo correo ya existe en la base de datos
+            if (userService.IsEmailAlreadyExists(nuevoCorreo, idSeleccionado))
+            {
+                MessageBox.Show("El correo electrónico ya existe. Por favor, elija otro.");
+                return;
+            }
+
+            userService.UpdateUser(idSeleccionado, txtNombre.Text, nuevoCorreo, txtPassword.Text, cbAcces.Text);
             ResetInputs();
             LoadUserDataGrid();
             SetUserControl(0);

@@ -14,7 +14,7 @@ namespace Sistema_Prestamos.src.config
             try
             {
                 // La expresión regular para validar direcciones de correo electrónico
-                string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+                string pattern = @"^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$";
 
                 // Verifica si el formato del correo electrónico es válido
                 bool isValid = Regex.IsMatch(email, pattern);

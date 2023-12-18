@@ -75,7 +75,7 @@
             userControl.Location = new Point(0, 0);
             userControl.Name = "userControl";
             userControl.SelectedIndex = 0;
-            userControl.Size = new Size(1062, 566);
+            userControl.Size = new Size(1061, 570);
             userControl.TabIndex = 7;
             userControl.TabStop = false;
             // 
@@ -93,7 +93,7 @@
             userPage1.Location = new Point(4, 24);
             userPage1.Name = "userPage1";
             userPage1.Padding = new Padding(3);
-            userPage1.Size = new Size(1054, 538);
+            userPage1.Size = new Size(1053, 542);
             userPage1.TabIndex = 0;
             userPage1.Text = " ";
             userPage1.UseVisualStyleBackColor = true;
@@ -246,7 +246,7 @@
             userPage2.Location = new Point(4, 24);
             userPage2.Name = "userPage2";
             userPage2.Padding = new Padding(3);
-            userPage2.Size = new Size(1054, 538);
+            userPage2.Size = new Size(1053, 542);
             userPage2.TabIndex = 1;
             userPage2.UseVisualStyleBackColor = true;
             // 

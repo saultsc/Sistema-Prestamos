@@ -1,3 +1,4 @@
+using Sistema_Prestamos.src;
 using Sistema_Prestamos.src.views.Mantenimientos;
 
 namespace Sistema_Prestamos
@@ -13,7 +14,7 @@ namespace Sistema_Prestamos
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Usuarios());
+            Application.Run(new Direcciones());
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.EntityFrameworkCore;
+using OpenQA.Selenium;
 using Sistema_Prestamos.src.data.sqlserver;
 using Sistema_Prestamos.src.data.sqlserver.model;
 using System;
@@ -98,6 +99,13 @@ namespace Sistema_Prestamos.src.services
                 MessageBox.Show($"Error al actualizar el usuario con ID {userId}: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public bool IsEmailAlreadyExists(string email, int userId)
+        {
+            // Excluye al usuario actual con el identificador userId
+            return _context.Usuarios.Any(u => u.Id != userId && u.Email == email);
+        }
+
 
         public void DeleteUser(int userId)
         {
