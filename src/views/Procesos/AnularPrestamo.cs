@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema_Prestamos.src
+namespace Sistema_Prestamos.src.views.Procesos
 {
-    public partial class Menu : Form
+    public partial class AnularPrestamo : Form
     {
-        public Menu()
+        public AnularPrestamo()
         {
             InitializeComponent();
         }

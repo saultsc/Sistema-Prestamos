@@ -1,5 +1,7 @@
 using Sistema_Prestamos.src;
+using Sistema_Prestamos.src.views;
 using Sistema_Prestamos.src.views.Mantenimientos;
+using Sistema_Prestamos.src.views.Procesos;
 
 namespace Sistema_Prestamos
 {
@@ -14,7 +16,7 @@ namespace Sistema_Prestamos
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Clientes());
+            Application.Run(new RegistroPrestamo());
         }
     }
 }

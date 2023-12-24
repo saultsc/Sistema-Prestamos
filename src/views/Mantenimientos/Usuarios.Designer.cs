@@ -260,7 +260,7 @@
             pInputs.Controls.Add(cbAcces);
             pInputs.Controls.Add(txtCorreo);
             pInputs.Controls.Add(txtNombre);
-            pInputs.Location = new Point(606, 68);
+            pInputs.Location = new Point(552, 100);
             pInputs.Name = "pInputs";
             pInputs.Size = new Size(310, 258);
             pInputs.TabIndex = 15;
@@ -345,15 +345,15 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(199, 100);
+            pictureBox1.Location = new Point(178, 100);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(251, 251);
+            pictureBox1.Size = new Size(326, 353);
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(792, 346);
+            btnCancel.Location = new Point(757, 407);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(105, 31);
             btnCancel.TabIndex = 8;
@@ -363,7 +363,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(627, 346);
+            btnSave.Location = new Point(552, 407);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(97, 31);
             btnSave.TabIndex = 7;

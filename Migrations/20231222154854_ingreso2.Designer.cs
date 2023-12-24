@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sistema_Prestamos.src.data.sqlserver;
 
@@ -11,9 +12,11 @@ using Sistema_Prestamos.src.data.sqlserver;
 namespace Sistema_Prestamos.Migrations
 {
     [DbContext(typeof(PrestamoContext))]
-    partial class PrestamoContextModelSnapshot : ModelSnapshot
+    [Migration("20231222154854_ingreso2")]
+    partial class ingreso2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -222,9 +225,6 @@ namespace Sistema_Prestamos.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
 
-                    b.Property<int>("IdCliente")
-                        .HasColumnType("int");
-
                     b.Property<int>("IdPrestamo")
                         .HasColumnType("int");
 
@@ -280,9 +280,6 @@ namespace Sistema_Prestamos.Migrations
                     b.Property<string>("GarantiaPre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("IdCliente")
-                        .HasColumnType("int");
 
                     b.Property<double>("InteresPre")
                         .HasColumnType("float");

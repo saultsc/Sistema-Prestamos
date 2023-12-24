@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sistema_Prestamos.src.data.sqlserver;
 
@@ -11,9 +12,11 @@ using Sistema_Prestamos.src.data.sqlserver;
 namespace Sistema_Prestamos.Migrations
 {
     [DbContext(typeof(PrestamoContext))]
-    partial class PrestamoContextModelSnapshot : ModelSnapshot
+    [Migration("20231220020803_prestamos")]
+    partial class prestamos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -203,107 +206,6 @@ namespace Sistema_Prestamos.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Direccion");
-                });
-
-            modelBuilder.Entity("Sistema_Prestamos.src.data.sqlserver.model.Ingreso", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ClienteNombre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<int>("IdCliente")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdPrestamo")
-                        .HasColumnType("int");
-
-                    b.Property<double>("dinero")
-                        .HasColumnType("float");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Ingreso");
-                });
-
-            modelBuilder.Entity("Sistema_Prestamos.src.data.sqlserver.model.Prestamo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<double>("BalancePre")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime?>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<int>("CuotasPagadaPre")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CuotasPre")
-                        .HasColumnType("int");
-
-                    b.Property<string>("DiaPre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DiasCuotaPre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EstadoPre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("FechaPre")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("FiadorPre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("GarantiaPre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("IdCliente")
-                        .HasColumnType("int");
-
-                    b.Property<double>("InteresPre")
-                        .HasColumnType("float");
-
-                    b.Property<double>("MontoPre")
-                        .HasColumnType("float");
-
-                    b.Property<string>("NombreClient")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TipoPre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Prestamo");
                 });
 
             modelBuilder.Entity("Sistema_Prestamos.src.data.sqlserver.model.Usuario", b =>

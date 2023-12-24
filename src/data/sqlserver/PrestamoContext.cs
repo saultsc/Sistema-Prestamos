@@ -31,6 +31,8 @@ namespace Sistema_Prestamos.src.data.sqlserver
         public DbSet<Direccion> Direccion => Set<Direccion>();
         public DbSet<Cliente> Cliente => Set<Cliente>();
         public DbSet<Agente> Agente => Set<Agente>();
+        public DbSet<Prestamo> Prestamo => Set<Prestamo>();
+        public DbSet<Ingreso> Ingreso => Set<Ingreso>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -60,6 +62,14 @@ namespace Sistema_Prestamos.src.data.sqlserver
             modelBuilder.Entity<Agente>()
                .Property(u => u.CreatedAt)
                .HasDefaultValueSql("GETDATE()");
+
+            modelBuilder.Entity<Prestamo>()
+               .Property(u => u.CreatedAt)
+               .HasDefaultValueSql("GETDATE()");
+
+            modelBuilder.Entity<Ingreso>()
+              .Property(u => u.CreatedAt)
+              .HasDefaultValueSql("GETDATE()");
         }
 
     }

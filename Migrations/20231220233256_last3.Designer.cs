@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sistema_Prestamos.src.data.sqlserver;
 
@@ -11,9 +12,11 @@ using Sistema_Prestamos.src.data.sqlserver;
 namespace Sistema_Prestamos.Migrations
 {
     [DbContext(typeof(PrestamoContext))]
-    partial class PrestamoContextModelSnapshot : ModelSnapshot
+    [Migration("20231220233256_last3")]
+    partial class last3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -205,37 +208,6 @@ namespace Sistema_Prestamos.Migrations
                     b.ToTable("Direccion");
                 });
 
-            modelBuilder.Entity("Sistema_Prestamos.src.data.sqlserver.model.Ingreso", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ClienteNombre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<int>("IdCliente")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdPrestamo")
-                        .HasColumnType("int");
-
-                    b.Property<double>("dinero")
-                        .HasColumnType("float");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Ingreso");
-                });
-
             modelBuilder.Entity("Sistema_Prestamos.src.data.sqlserver.model.Prestamo", b =>
                 {
                     b.Property<int>("Id")
@@ -246,6 +218,9 @@ namespace Sistema_Prestamos.Migrations
 
                     b.Property<double>("BalancePre")
                         .HasColumnType("float");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -290,10 +265,6 @@ namespace Sistema_Prestamos.Migrations
                     b.Property<double>("MontoPre")
                         .HasColumnType("float");
 
-                    b.Property<string>("NombreClient")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("TipoPre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -302,6 +273,8 @@ namespace Sistema_Prestamos.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClienteId");
 
                     b.ToTable("Prestamo");
                 });
@@ -366,6 +339,17 @@ namespace Sistema_Prestamos.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Zona");
+                });
+
+            modelBuilder.Entity("Sistema_Prestamos.src.data.sqlserver.model.Prestamo", b =>
+                {
+                    b.HasOne("Sistema_Prestamos.src.data.sqlserver.model.Cliente", "Cliente")
+                        .WithMany()
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cliente");
                 });
 #pragma warning restore 612, 618
         }
